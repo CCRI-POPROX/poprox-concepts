@@ -25,7 +25,7 @@ class Mention(BaseModel):
 class Article(BaseModel):
     article_id: UUID = None
     title: str
-    content: str = ""
-    url: str
+    content: Optional[str] = None
+    url: Optional[str] = None
     published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
     mentions: List[Mention] = []
