@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -11,7 +11,7 @@ class Entity(BaseModel):
     name: str
     entity_type: str
     source: str
-    raw_data: str
+    raw_data: Dict[str, Any]
 
 
 class Mention(BaseModel):
