@@ -8,7 +8,7 @@ class Account(BaseModel):
     email: str
 
 
-class Account_Interest(BaseException):
+class AccountInterest(BaseException):
     account_id: UUID = None
     entity_id: UUID
     entity_name: str
