@@ -11,5 +11,6 @@ class Account(BaseModel):
 class AccountInterest(BaseModel):
     account_id: UUID = None
     entity_id: UUID
+    entity_name: str
     preference: int
     frequency: int
