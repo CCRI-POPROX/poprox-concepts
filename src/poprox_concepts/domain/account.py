@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class Account(BaseModel):
     account_id: UUID = None
     email: str
-    source: str
+    status: str
 
 
 class AccountInterest(BaseModel):
