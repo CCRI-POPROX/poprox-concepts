@@ -1,0 +1,16 @@
+GENERAL_TOPICS = [
+    "U.S. news",
+    "World news",
+    "Politics",
+    "Business",
+    "Entertainment",
+    "Sports",
+    "Health",
+    "Science",
+    "Technology",
+    "Lifestyle",
+    "Religion",
+    "Climate and environment",
+    "Education",
+    "Oddities",
+]

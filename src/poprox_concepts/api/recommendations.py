@@ -3,13 +3,13 @@ from uuid import UUID
 
 from pydantic import BaseModel, PositiveInt
 
-from poprox_concepts.domain import Article, ClickHistory
+from poprox_concepts.domain import Article, InterestProfile
 
 
 class RecommendationRequest(BaseModel):
     todays_articles: List[Article]
     past_articles: List[Article]
-    click_histories: List[ClickHistory]
+    interest_profile: InterestProfile
     num_recs: PositiveInt
 
 
