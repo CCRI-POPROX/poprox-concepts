@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 from typing import Any
 from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Entity(BaseModel):
@@ -11,7 +11,7 @@ class Entity(BaseModel):
     name: str
     entity_type: str
     source: str
-    raw_data: dict[str, Any]
+    raw_data: dict[str, Any] | None = Field(exclude=True)
 
 
 class Mention(BaseModel):
@@ -31,4 +31,4 @@ class Article(BaseModel):
     mentions: list[Mention] = []
     source: str | None = None
     external_id: str | None = None
-    raw_data: dict[str, Any] | None = None
+    raw_data: dict[str, Any] | None = Field(exclude=True)
