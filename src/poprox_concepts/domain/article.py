@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 from typing import Any
 from uuid import UUID
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class Entity(BaseModel):
@@ -32,3 +32,9 @@ class Article(BaseModel):
     source: str | None = None
     external_id: str | None = None
     raw_data: dict[str, Any] | None = Field(exclude=True, default=None)
+
+
+class ArticleSet(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
+    articles: list[Article]
