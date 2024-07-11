@@ -10,4 +10,4 @@ class Image(BaseModel):
     url: str
     source: str
     external_id: str | None = None
-    raw_data: dict[str, Any] | None = Field(exclude=True, default=None)
+    raw_data: dict[str, Any] | None
