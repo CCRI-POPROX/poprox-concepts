@@ -14,6 +14,7 @@ class Entity(BaseModel):
     raw_data: dict[str, Any] | None
 
 
+
 class Mention(BaseModel):
     article_id: UUID | None = None
     mention_id: UUID | None = None
