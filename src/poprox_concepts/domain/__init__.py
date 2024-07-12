@@ -12,6 +12,7 @@ __all__ = [
     "Image",
     "Mention",
     "ClickHistory",
+    "ClickHistoryWithTimestamp",
     "AccountInterest",
     "InterestProfile",
 ]
