@@ -32,7 +32,7 @@ class Article(BaseModel):
     mentions: list[Mention] = []
     source: str | None = None
     external_id: str | None = None
-    raw_data: dict[str, Any] | None
+    raw_data: dict[str, Any] | None = None
 
 
 class ArticleSet(BaseModel):
