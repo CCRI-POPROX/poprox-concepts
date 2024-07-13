@@ -11,8 +11,7 @@ class Entity(BaseModel):
     name: str
     entity_type: str
     source: str
-    raw_data: dict[str, Any] | None
-
+    raw_data: dict[str, Any] | None = None
 
 
 class Mention(BaseModel):
