@@ -1,8 +1,7 @@
-from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel
 
 
-class ClickHistoryWithTimestamp(BaseModel):
-    article_id_with_time_tuples: list[(UUID, datetime)]
+class Click(BaseModel):
+    article_id: UUID

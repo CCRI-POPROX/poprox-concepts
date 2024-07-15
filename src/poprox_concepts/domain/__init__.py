@@ -11,8 +11,8 @@ __all__ = [
     "Entity",
     "Image",
     "Mention",
+    "Click",
     "ClickHistory",
-    "ClickHistoryWithTimestamp",
     "AccountInterest",
     "InterestProfile",
 ]
