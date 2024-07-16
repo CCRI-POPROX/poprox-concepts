@@ -1,11 +1,12 @@
-import uuid
 import base64
+import uuid
+
 import pytest
 
 from poprox_concepts.internals import (
     Tracking_Link_Data,
-    to_hashed_base64,
     from_hashed_base64,
+    to_hashed_base64,
 )
 
 
@@ -30,9 +31,7 @@ def test_without_hmac():
         article_id=uuid.uuid4(),
         url="https://test.com",
     )
-    encoded = base64.urlsafe_b64encode(data.model_dump_json().encode("UTF-8")).decode(
-        "UTF8"
-    )
+    encoded = base64.urlsafe_b64encode(data.model_dump_json().encode("UTF-8")).decode("UTF8")
     with pytest.raises(ValueError):
         from_hashed_base64(encoded, key, Tracking_Link_Data)
 
