@@ -1,25 +1,52 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v4.6.0
     hooks:
       - id: check-added-large-files
+        exclude: conda-lock.*\.yml
       - id: check-json
+        exclude: outputs/.*\.json
       - id: check-merge-conflict
       - id: check-shebang-scripts-are-executable
       - id: check-yaml
+        exclude: .*/cloudformation\.yml
       - id: debug-statements
       - id: end-of-file-fixer
       - id: mixed-line-ending
-      - id: name-tests-test
-      - id: pretty-format-json
-      - id: requirements-txt-fixer
       - id: trailing-whitespace
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.12.1
+    hooks:
+      - id: yamlfmt
+        name: format yaml files
+        exclude: conda-lock.*\.yml
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.4.3
+    rev: v0.4.8
     hooks:
       # Run the linter.
       - id: ruff
         args: [--fix]
+        name: auto-fix Python lint errors
       # Run the formatter.
       - id: ruff-format
+        name: format Python source
+  - repo: local
+    hooks:
+      - id: format-toml-files
+        name: format toml files
+        entry: taplo
+        args: ["format"]
+        files: \.toml$
+        language: node
+        additional_dependencies:
+          - "@taplo/cli"
+      # shfmt support, adapted from https://github.com/mvdan/sh/issues/818
+      - id: format-shell-scripts
+        name: format shell scripts
+        language: golang
+        require_serial: true
+        additional_dependencies: [mvdan.cc/sh/v3/cmd/shfmt@v3.8.0]
+        entry: shfmt
+        args: ["-l", "-w", "-i", "4"]
+        types: [shell]
