@@ -13,12 +13,6 @@ class TrackingLinkData(BaseModel):
     article_id: UUID
 
 
-# XXX -- this can be refactored into a special case of the LoginLinkData in the future.
-class UnsubscribeLinkData(BaseModel):
-    account_id: UUID
-    newsletter_id: UUID = None
-
-
 class LoginLinkData(BaseModel):
     """The endpoint and data should use the values that would be passed to url_for in flask.
     In general this would be the name of the endpoint (i.e. python function name)"""
