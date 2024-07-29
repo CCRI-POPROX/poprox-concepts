@@ -13,15 +13,14 @@ class TrackingLinkData(BaseModel):
     article_id: UUID
 
 
-Tracking_Link_Data = TrackingLinkData  # XXX - rename class.
+class LoginLinkData(BaseModel):
+    """The endpoint and data should use the values that would be passed to url_for in flask.
+    In general this would be the name of the endpoint (i.e. python function name)"""
 
-
-class UnsubscribeLinkData(BaseModel):
     account_id: UUID
-    newsletter_id: UUID = None
-
-
-Unsubscribe_Link_Data = UnsubscribeLinkData  # XXX - rename class.
+    newsletter_id: UUID | None = None
+    endpoint: str
+    data: dict
 
 
 def to_hashed_base64(data: BaseModel, key: str) -> str:
