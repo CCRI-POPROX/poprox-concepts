@@ -7,7 +7,7 @@ class Account(BaseModel):
     account_id: UUID = None
     email: str
     status: str
-    source: str
+    source: str | None = None
 
 
 class AccountInterest(BaseModel):
