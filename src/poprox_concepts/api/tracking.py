@@ -3,7 +3,7 @@ import hashlib
 import hmac
 from uuid import UUID
 
-from pydantic import BaseModel
+from pydantic import AwareDatetime, BaseModel
 
 
 class TrackingLinkData(BaseModel):
@@ -21,6 +21,12 @@ class LoginLinkData(BaseModel):
     newsletter_id: UUID | None = None
     endpoint: str
     data: dict
+
+
+class SignUpToken(BaseModel):
+    email: str
+    source: str
+    created_at: AwareDatetime
 
 
 def to_hashed_base64(data: BaseModel, key: str) -> str:
