@@ -25,6 +25,6 @@ class RecommenderInfo(BaseModel):
     recommendations.
     """
 
-    name: str | None = Field(default=None)
-    version: str | None = Field(default=None)
-    hash: str | None = Field(default=None)
+    name: str | None = None
+    version: str | None = None
+    hash: str | None = None
