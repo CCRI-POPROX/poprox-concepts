@@ -6,4 +6,5 @@ from pydantic import BaseModel
 
 class Click(BaseModel):
     article_id: UUID
+    newsletter_id: UUID | None = None
     timestamp: datetime
