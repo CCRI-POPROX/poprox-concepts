@@ -1,6 +1,6 @@
 from poprox_concepts.domain.account import Account, AccountInterest
 from poprox_concepts.domain.article import Article, ArticleSet, Entity, Mention
-from poprox_concepts.domain.click_history import ClickHistory
+from poprox_concepts.domain.click import Click
 from poprox_concepts.domain.image import Image
 from poprox_concepts.domain.profile import InterestProfile
 
@@ -12,7 +12,6 @@ __all__ = [
     "Image",
     "Mention",
     "Click",
-    "ClickHistory",
     "AccountInterest",
     "InterestProfile",
 ]
