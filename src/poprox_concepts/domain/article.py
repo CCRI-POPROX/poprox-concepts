@@ -1,8 +1,8 @@
 from datetime import datetime, timezone
 from typing import Any
-from uuid import UUID
+from uuid import UUID, uuid4
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class Entity(BaseModel):
@@ -23,7 +23,7 @@ class Mention(BaseModel):
 
 
 class Article(BaseModel):
-    article_id: UUID | None = None
+    article_id: UUID = Field(default_factory=uuid4)
     title: str
     content: str | None = None
     url: str | None = None
