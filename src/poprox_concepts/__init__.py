@@ -20,6 +20,6 @@ __all__ = [
     "ArticleSet",
     "Click",
     "Entity",
-    "Mention",
     "InterestProfile",
+    "Mention",
 ]
