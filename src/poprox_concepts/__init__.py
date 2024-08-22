@@ -8,6 +8,7 @@ from poprox_concepts.domain import (
     Entity,
     InterestProfile,
     Mention,
+    ScrapedArticle,
 )
 
 __all__ = [
@@ -22,4 +23,5 @@ __all__ = [
     "Entity",
     "InterestProfile",
     "Mention",
+    "ScrapedArticle"
 ]

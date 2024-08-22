@@ -39,3 +39,13 @@ class ArticleSet(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     articles: list[Article]
+
+
+class ScrapedArticle(BaseModel):
+    title: str
+    description: str | None = None
+    url: str
+    section: str | None = None
+    level: str | None = None
+    image_url: str | None = None
+    created_at: datetime = datetime.now(timezone.utc)
