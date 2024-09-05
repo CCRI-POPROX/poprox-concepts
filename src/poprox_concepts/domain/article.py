@@ -39,3 +39,12 @@ class ArticleSet(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     articles: list[Article]
+
+
+class ArticlePlacement(BaseModel):
+    article_id: UUID = Field(default_factory=uuid4)
+    url: str | None = None
+    section: str | None = None
+    level: str | None = None
+    image_url: str | None = None
+    created_at: datetime = datetime.now(timezone.utc)
