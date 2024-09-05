@@ -41,10 +41,9 @@ class ArticleSet(BaseModel):
     articles: list[Article]
 
 
-class ScrapedArticle(BaseModel):
-    title: str
-    description: str | None = None
-    url: str
+class ArticlePlacement(BaseModel):
+    article_id: UUID = Field(default_factory=uuid4)
+    url: str | None = None
     section: str | None = None
     level: str | None = None
     image_url: str | None = None

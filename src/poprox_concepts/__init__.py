@@ -3,12 +3,12 @@ from poprox_concepts.domain import (
     Account,
     AccountInterest,
     Article,
+    ArticlePlacement,
     ArticleSet,
     Click,
     Entity,
     InterestProfile,
     Mention,
-    ScrapedArticle,
 )
 
 __all__ = [
@@ -23,5 +23,5 @@ __all__ = [
     "Entity",
     "InterestProfile",
     "Mention",
-    "ScrapedArticle"
+    "ArticlePlacement",
 ]
