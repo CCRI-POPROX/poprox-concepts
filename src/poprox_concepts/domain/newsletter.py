@@ -1,3 +1,4 @@
+from datetime import datetime
 from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
@@ -12,3 +13,4 @@ class Newsletter(BaseModel):
     articles: list[Article]
     subject: str
     body_html: str
+    created_at: datetime | None = None
