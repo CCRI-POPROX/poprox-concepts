@@ -6,6 +6,13 @@ from pydantic import BaseModel, Field
 from poprox_concepts.domain.article import Article
 
 
+class Impression(BaseModel):
+    newsletter_id: UUID
+    article_id: UUID
+    position: int
+    created_at: datetime | None = None
+
+
 class Newsletter(BaseModel):
     newsletter_id: UUID = Field(default_factory=uuid4)
     account_id: UUID
