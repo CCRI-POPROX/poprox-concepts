@@ -3,7 +3,7 @@ from poprox_concepts.domain.article import Article, ArticlePlacement, ArticleSet
 from poprox_concepts.domain.click import Click
 from poprox_concepts.domain.demographics import Demographics
 from poprox_concepts.domain.image import Image
-from poprox_concepts.domain.newsletter import Newsletter
+from poprox_concepts.domain.newsletter import Impression, Newsletter
 from poprox_concepts.domain.profile import InterestProfile
 
 __all__ = [
@@ -14,6 +14,7 @@ __all__ = [
     "Click",
     "Entity",
     "Image",
+    "Impression",
     "InterestProfile",
     "Mention",
     "Newsletter",
