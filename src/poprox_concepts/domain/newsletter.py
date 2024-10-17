@@ -22,5 +22,6 @@ class Newsletter(BaseModel):
     body_html: str
     created_at: datetime | None = None
 
+    @property
     def articles(self) -> list[Article]:
         return [impression.article for impression in self.impressions]
