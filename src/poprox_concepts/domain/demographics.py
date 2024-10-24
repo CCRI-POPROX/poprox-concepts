@@ -8,7 +8,7 @@ class Demographics(BaseModel):
     account_id: UUID
     gender: str
     birth_year: int
-    zip5: str
+    zip3: str
     education: str
     race: str
 
