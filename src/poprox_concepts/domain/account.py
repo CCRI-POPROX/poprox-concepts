@@ -9,6 +9,7 @@ class Account(BaseModel):
     zip5: str | None = None
     status: str
     source: str | None = None
+    subsource: str | None = None
 
 
 class AccountInterest(BaseModel):
