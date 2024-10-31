@@ -26,6 +26,7 @@ class Article(BaseModel):
     article_id: UUID = Field(default_factory=uuid4)
     headline: str
     subhead: str | None = None
+    body: str | None = None
     url: str | None = None
     preview_image_id: UUID | None = None
     published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
