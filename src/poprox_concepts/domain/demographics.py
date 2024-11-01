@@ -11,8 +11,7 @@ class Demographics(BaseModel):
     zip5: str
     education: str
     race: str
-    # client: str
-
+    email_client: str | None = None
 
 GENDER_OPTIONS = ["Woman", "Man", "Non-binary", "Other", "Prefer not to say"]
 
@@ -43,8 +42,8 @@ RACE_OPTIONS = [
 
 
 EMAIL_CLIENT_OPTIONS = [
-    "Outlook"
-    "Gmail"
-    "Apple Mail"
-    "Other"
+    "Outlook",
+    "Gmail",
+    "Apple Mail",
+    "Other",
 ]
