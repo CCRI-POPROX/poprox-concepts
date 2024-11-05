@@ -11,6 +11,7 @@ class Demographics(BaseModel):
     zip3: str
     education: str
     race: str
+    email_client: str | None = None
 
 
 GENDER_OPTIONS = ["Woman", "Man", "Non-binary", "Other", "Prefer not to say"]
@@ -38,4 +39,12 @@ RACE_OPTIONS = [
     "Native Hawaiian or Other Pacific Islander",
     "Prefer not to say",
     "Not listed (please specify)",
+]
+
+
+EMAIL_CLIENT_OPTIONS = [
+    "Outlook",
+    "Gmail",
+    "Apple Mail",
+    "Other",
 ]
