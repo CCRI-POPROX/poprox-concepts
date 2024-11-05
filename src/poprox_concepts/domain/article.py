@@ -28,11 +28,12 @@ class Article(BaseModel):
     subhead: str | None = None
     url: str | None = None
     preview_image_id: UUID | None = None
-    published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
     mentions: list[Mention] = []
     source: str | None = None
     external_id: str | None = None
     raw_data: dict[str, Any] | None = None
+    published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
+    created_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
 
 
 class ArticleSet(BaseModel):
