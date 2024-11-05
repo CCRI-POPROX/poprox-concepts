@@ -13,6 +13,7 @@ class Demographics(BaseModel):
     race: str
     email_client: str | None = None
 
+
 GENDER_OPTIONS = ["Woman", "Man", "Non-binary", "Other", "Prefer not to say"]
 
 
