@@ -26,6 +26,7 @@ class LoginLinkData(BaseModel):
 class SignUpToken(BaseModel):
     email: str
     source: str
+    subsource: str | None = None
     created_at: AwareDatetime
 
 
