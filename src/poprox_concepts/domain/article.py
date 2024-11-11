@@ -34,7 +34,7 @@ class Article(BaseModel):
     external_id: str | None = None
     raw_data: dict[str, Any] | None = None
     published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
-    created_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
+    created_at: datetime | None = None
 
 
 class ArticleSet(BaseModel):
