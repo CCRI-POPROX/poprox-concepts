@@ -4,6 +4,8 @@ from uuid import UUID, uuid4
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from poprox_concepts.domain.image import Image
+
 
 class Entity(BaseModel):
     entity_id: UUID | None = None
