@@ -14,11 +14,11 @@ class Account(BaseModel):
 
 
 class AccountInterest(BaseModel):
-    account_id: UUID = None
+    account_id: UUID | None = None
     entity_id: UUID
     entity_name: str
-    preference: int | None
-    frequency: int | None
+    preference: int
+    frequency: int | None = None
 
 
 COMPENSATION_CHARITY_OPTIONS = [
