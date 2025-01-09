@@ -4,6 +4,8 @@ from uuid import UUID, uuid4
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from poprox_concepts.domain.image import Image
+
 
 class Entity(BaseModel):
     entity_id: UUID | None = None
@@ -33,6 +35,7 @@ class Article(BaseModel):
     source: str | None = None
     external_id: str | None = None
     raw_data: dict[str, Any] | None = None
+    images: list[Image]
     published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
     created_at: datetime | None = None
 
