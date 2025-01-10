@@ -47,7 +47,8 @@ class ArticleSet(BaseModel):
 
 
 class ArticlePlacement(BaseModel):
-    article_id: UUID = Field(default_factory=uuid4)
+    placement_id: UUID = Field(default_factory=uuid4)
+    article_id: UUID
     url: str | None = None
     section: str | None = None
     level: str | None = None
