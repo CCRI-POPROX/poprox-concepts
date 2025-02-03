@@ -11,7 +11,7 @@ class Account(BaseModel):
     status: str
     source: str | None = None
     subsource: str | None = None
-    rec_id: str | None = None
+    placebo_id: str | None = None
 
 
 class AccountInterest(BaseModel):
