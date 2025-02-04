@@ -45,6 +45,11 @@ class ArticleSet(BaseModel):
 
     articles: list[Article]
 
+class RecommendationList(BaseModel):
+    model_config = ConfigDict(extra="allow")
+
+    articles: list[Article]
+
 
 class ArticlePlacement(BaseModel):
     placement_id: UUID = Field(default_factory=uuid4)
