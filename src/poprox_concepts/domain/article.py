@@ -40,7 +40,7 @@ class Article(BaseModel):
     created_at: datetime | None = None
 
 
-class ArticleSet(BaseModel):
+class CandidateSet(BaseModel):
     model_config = ConfigDict(extra="allow")
 
     articles: list[Article]
