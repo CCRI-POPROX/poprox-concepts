@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 from typing import Any
 from uuid import UUID, uuid4
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, Field
 
 from poprox_concepts.domain.image import Image
 
@@ -38,12 +38,6 @@ class Article(BaseModel):
     images: list[Image] | None = None
     published_at: datetime = datetime(1970, 1, 1, 0, 0, tzinfo=timezone.utc)
     created_at: datetime | None = None
-
-
-class ArticleSet(BaseModel):
-    model_config = ConfigDict(extra="allow")
-
-    articles: list[Article]
 
 
 class ArticlePlacement(BaseModel):
