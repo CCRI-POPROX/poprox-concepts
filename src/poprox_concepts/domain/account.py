@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 class Account(BaseModel):
     account_id: UUID = None
-    email: str
+    email: str | None = None
     zip5: str | None = None
     compensation: str | None = None
     status: str
