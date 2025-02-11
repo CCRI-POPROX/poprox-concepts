@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Any
 from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
@@ -11,6 +12,7 @@ class Impression(BaseModel):
     position: int
     article: Article
     created_at: datetime | None = None
+    extra: dict[str, Any] | None = None
 
 
 class Newsletter(BaseModel):
