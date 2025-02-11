@@ -12,7 +12,7 @@ class Impression(BaseModel):
     position: int
     article: Article
     created_at: datetime | None = None
-    experiment_extra: dict[str, Any] | None = None
+    extra: dict[str, Any] | None = None
 
 
 class Newsletter(BaseModel):
