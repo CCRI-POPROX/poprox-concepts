@@ -1,21 +1,19 @@
 from __future__ import annotations
 
-from uuid import UUID
-
 from pydantic import BaseModel, Field, PositiveInt
 
-from poprox_concepts.domain import Article, InterestProfile
+from poprox_concepts.domain import CandidateSet, InterestProfile, RecommendationList
 
 
 class RecommendationRequest(BaseModel):
-    todays_articles: list[Article]
-    past_articles: list[Article]
+    todays_articles: CandidateSet
+    past_articles: CandidateSet
     interest_profile: InterestProfile
     num_recs: PositiveInt
 
 
 class RecommendationResponse(BaseModel):
-    recommendations: dict[UUID, list[Article]]
+    recommendations: RecommendationList
     recommender: RecommenderInfo | None = Field(default=None)
 
 
