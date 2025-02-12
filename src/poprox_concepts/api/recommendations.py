@@ -6,8 +6,8 @@ from poprox_concepts.domain import CandidateSet, InterestProfile, Recommendation
 
 
 class RecommendationRequest(BaseModel):
-    todays_articles: CandidateSet
-    past_articles: CandidateSet
+    candidates: CandidateSet
+    interacted: CandidateSet
     interest_profile: InterestProfile
     num_recs: PositiveInt
 
