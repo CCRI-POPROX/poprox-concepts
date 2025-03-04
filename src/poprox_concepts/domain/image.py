@@ -10,4 +10,4 @@ class Image(BaseModel):
     caption: str | None = None
     source: str
     external_id: str | None = None
-    raw_data: dict[str, Any] | None
+    raw_data: dict[str, Any] | None = None
