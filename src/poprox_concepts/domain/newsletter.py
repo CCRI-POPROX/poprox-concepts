@@ -13,6 +13,8 @@ class Impression(BaseModel):
     article: Article
     created_at: datetime | None = None
     extra: dict[str, Any] | None = None
+    headline: str | None = None
+    subhead: str | None = None
 
 
 class Newsletter(BaseModel):
