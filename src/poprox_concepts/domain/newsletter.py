@@ -15,6 +15,7 @@ class Impression(BaseModel):
     extra: dict[str, Any] | None = None
     headline: str | None = None
     subhead: str | None = None
+    pipeline_name: str | None = None
 
 
 class Newsletter(BaseModel):
