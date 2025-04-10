@@ -4,6 +4,7 @@ from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
 
+from poprox_concepts.api.recommendations import RecommenderInfo
 from poprox_concepts.domain.article import Article
 
 
@@ -13,6 +14,8 @@ class Impression(BaseModel):
     article: Article
     created_at: datetime | None = None
     extra: dict[str, Any] | None = None
+    headline: str | None = None
+    subhead: str | None = None
     feedback: bool | None = None
 
 
@@ -24,6 +27,7 @@ class Newsletter(BaseModel):
     subject: str
     body_html: str
     created_at: datetime | None = None
+    recommender_info: RecommenderInfo | None = None
     feedback: bool | None = None
 
     @property
