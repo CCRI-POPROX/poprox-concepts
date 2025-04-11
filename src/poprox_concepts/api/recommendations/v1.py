@@ -5,7 +5,8 @@ from uuid import UUID
 from pydantic import BaseModel, Field, PositiveInt
 
 from poprox_concepts.api.recommendations.versions import ProtocolVersions, RecommenderInfo
-from poprox_concepts.domain import Article, InterestProfile
+from poprox_concepts.domain.article import Article
+from poprox_concepts.domain.profile import InterestProfile
 
 
 class ProtocolModelV1_1(BaseModel):
