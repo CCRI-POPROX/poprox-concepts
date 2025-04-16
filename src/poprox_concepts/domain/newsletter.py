@@ -16,6 +16,7 @@ class Impression(BaseModel):
     extra: dict[str, Any] | None = None
     headline: str | None = None
     subhead: str | None = None
+    feedback: bool | None = None
 
 
 class Newsletter(BaseModel):
@@ -27,6 +28,7 @@ class Newsletter(BaseModel):
     body_html: str
     created_at: datetime | None = None
     recommender_info: RecommenderInfo | None = None
+    feedback: bool | None = None
 
     @property
     def articles(self) -> list[Article]:
