@@ -35,3 +35,24 @@ COMPENSATION_CARD_OPTIONS = [
     "Walmart",
     "Tango",
 ]
+
+INTERNAL_ACCOUNT_SOURCES = [
+    "friends_of_poprox",
+    "team",
+    "test",
+    "kluver",
+]
+
+EXTERNAL_ACCOUNT_SOURCES = [
+    "website",
+    "ff",
+    "ml-volunteers",
+]
+
+
+def is_internal_account(account: Account) -> bool:
+    return account.source is not None and account.source in INTERNAL_ACCOUNT_SOURCES
+
+
+def is_external_account(account: Account) -> bool:
+    return account.source is not None and account.source in EXTERNAL_ACCOUNT_SOURCES
