@@ -50,6 +50,7 @@ EXTERNAL_ACCOUNT_SOURCES = [
 ]
 
 
+# NOTE: these are not opposites -- a user may be _neither_ internal nor external if the source code is not recognized.
 def is_internal_account(account: Account) -> bool:
     return account.source is not None and account.source in INTERNAL_ACCOUNT_SOURCES
 
