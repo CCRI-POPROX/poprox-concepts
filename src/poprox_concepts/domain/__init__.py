@@ -1,5 +1,5 @@
 from poprox_concepts.domain.account import Account, AccountInterest
-from poprox_concepts.domain.article import Article, ArticlePlacement, Entity, Mention
+from poprox_concepts.domain.article import Article, ArticlePlacement, Entity, Mention, TopNewsHeadline
 from poprox_concepts.domain.click import Click
 from poprox_concepts.domain.demographics import Demographics
 from poprox_concepts.domain.image import Image
@@ -11,8 +11,10 @@ __all__ = [
     "Account",
     "AccountInterest",
     "Article",
+    "ArticlePlacement",
     "CandidateSet",
     "Click",
+    "Demographics",
     "Entity",
     "Image",
     "Impression",
@@ -20,6 +22,5 @@ __all__ = [
     "Mention",
     "Newsletter",
     "RecommendationList",
-    "ArticlePlacement",
-    "Demographics",
+    "TopNewsHeadline",
 ]
