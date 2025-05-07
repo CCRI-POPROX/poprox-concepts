@@ -9,6 +9,7 @@ from poprox_concepts.domain.article import Article
 
 
 class Impression(BaseModel):
+    impression_id: UUID = Field(default_factory=uuid4)
     newsletter_id: UUID
     position: int
     article: Article
