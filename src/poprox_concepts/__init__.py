@@ -2,6 +2,7 @@ from poprox_concepts import api, domain, internals
 from poprox_concepts.domain import (
     Account,
     AccountInterest,
+    AccountPanelManagement,
     Article,
     ArticlePlacement,
     CandidateSet,
@@ -18,6 +19,7 @@ __all__ = [
     "internals",
     "Account",
     "AccountInterest",
+    "AccountPanelManagement",
     "Article",
     "CandidateSet",
     "Click",

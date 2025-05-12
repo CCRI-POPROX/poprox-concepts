@@ -22,6 +22,12 @@ class AccountInterest(BaseModel):
     frequency: int | None = None
 
 
+class AccountPanelManagement(BaseModel):
+    accoint_id: UUID
+    source: str | None
+    subsource: str | None
+
+
 COMPENSATION_CHARITY_OPTIONS = [
     "American Red Cross",
     "American Cancer Society",

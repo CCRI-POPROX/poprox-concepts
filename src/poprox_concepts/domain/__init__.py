@@ -1,4 +1,4 @@
-from poprox_concepts.domain.account import Account, AccountInterest
+from poprox_concepts.domain.account import Account, AccountInterest, AccountPanelManagement
 from poprox_concepts.domain.article import Article, ArticlePlacement, Entity, Mention
 from poprox_concepts.domain.click import Click
 from poprox_concepts.domain.demographics import Demographics
@@ -10,6 +10,7 @@ from poprox_concepts.domain.recommendation import CandidateSet, RecommendationLi
 __all__ = [
     "Account",
     "AccountInterest",
+    "AccountPanelManagement",
     "Article",
     "CandidateSet",
     "Click",
