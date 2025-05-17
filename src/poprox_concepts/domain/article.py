@@ -48,3 +48,12 @@ class ArticlePlacement(BaseModel):
     level: str | None = None
     image_url: str | None = None
     created_at: datetime = datetime.now(timezone.utc)
+
+
+class TopNewsHeadline(BaseModel):
+    article_id: UUID | None = None
+    entity_id: UUID | None = None
+    topic: str
+    headline: str
+    position: int
+    as_of: datetime
