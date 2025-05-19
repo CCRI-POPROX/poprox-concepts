@@ -29,7 +29,7 @@ class Newsletter(BaseModel):
     body_html: str
     created_at: datetime | None = None
     recommender_info: RecommenderInfo | None = None
-    feedback: bool | None = None
+    feedback: str | None = None
 
     @property
     def articles(self) -> list[Article]:
