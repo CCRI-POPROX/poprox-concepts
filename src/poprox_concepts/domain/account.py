@@ -1,3 +1,4 @@
+from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -12,6 +13,7 @@ class Account(BaseModel):
     source: str | None = None
     subsource: str | None = None
     placebo_id: str | None = None
+    created_at: datetime | None = None
 
 
 class AccountInterest(BaseModel):
