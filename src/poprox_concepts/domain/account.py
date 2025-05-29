@@ -1,3 +1,4 @@
+from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -12,6 +13,7 @@ class Account(BaseModel):
     source: str | None = None
     subsource: str | None = None
     placebo_id: str | None = None
+    created_at: datetime | None = None
 
 
 class AccountInterest(BaseModel):
@@ -20,12 +22,6 @@ class AccountInterest(BaseModel):
     entity_name: str
     preference: int
     frequency: int | None = None
-
-
-class AccountPanelManagement(BaseModel):
-    accoint_id: UUID
-    source: str | None
-    subsource: str | None
 
 
 COMPENSATION_CHARITY_OPTIONS = [
