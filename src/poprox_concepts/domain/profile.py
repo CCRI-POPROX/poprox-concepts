@@ -13,4 +13,5 @@ class InterestProfile(BaseModel):
     click_history: list[Click]
     click_topic_counts: dict[str, int] | None = None
     click_locality_counts: dict[str, int] | None = None
+    article_feedbacks: dict[UUID, bool] | None = None
     onboarding_topics: list[AccountInterest]
