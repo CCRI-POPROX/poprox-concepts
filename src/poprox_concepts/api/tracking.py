@@ -23,11 +23,18 @@ class LoginLinkData(BaseModel):
     data: dict
 
 
-class SignUpToken(BaseModel):
+class Token(BaseModel):
+    token_id: UUID
+    code: str
+    created_at: AwareDatetime
+
+
+class SignUpLinkData(BaseModel):
     email: str
     source: str
     subsource: str | None = None
     created_at: AwareDatetime
+    token_id: UUID
 
 
 def to_hashed_base64(data: BaseModel, key: str) -> str:
