@@ -1,10 +1,13 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, Field, PositiveInt
+from typing import TypeAlias
+
+from pydantic import BaseModel, Field, JsonValue, PositiveInt
 
 from poprox_concepts.api.recommendations.versions import ProtocolVersions, RecommenderInfo
+from poprox_concepts.domain.newsletter import Impression
 from poprox_concepts.domain.profile import InterestProfile
-from poprox_concepts.domain.recommendation import CandidateSet, RecommendationList
+from poprox_concepts.domain.recommendation import CandidateSet
 
 
 class ProtocolModelV3_0(BaseModel):
@@ -24,7 +27,15 @@ class RecommendationRequestV3(ProtocolModelV3_0):
 
 class RecommendationResponseSection(BaseModel):
     title: str
-    recommendations: RecommendationList
+    recommendations: RecommendationList_v3
+
+
+Extra: TypeAlias = dict[str, JsonValue]
+
+
+class RecommendationList_v3(ProtocolModelV3_0):
+    articles: list[Impression] = Field(default_factory=list)
+    extras: list[Extra] = Field(default_factory=list)
 
 
 class RecommendationResponseV3(ProtocolModelV3_0):
