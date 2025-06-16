@@ -10,7 +10,7 @@ from poprox_concepts.domain.article import Article
 
 class Impression(BaseModel):
     impression_id: UUID = Field(default_factory=uuid4)
-    newsletter_id: UUID
+    newsletter_id: UUID | None
     position: int
     article: Article
     created_at: datetime | None = None
