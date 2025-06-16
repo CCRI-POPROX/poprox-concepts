@@ -34,7 +34,7 @@ Extra: TypeAlias = dict[str, JsonValue]
 
 
 class RecommendationList_v3(ProtocolModelV3_0):
-    articles: list[Impression] = Field(default_factory=list)
+    impressions: list[Impression] = Field(default_factory=list)
     extras: list[Extra] = Field(default_factory=list)
 
 
