@@ -6,7 +6,7 @@ from pydantic import BaseModel
 class ProtocolVersions(Enum):
     VERSION_1_1 = "1.1-2024-08-08"
     VERSION_2_0 = "2.0-2025-02-12"
-    VERSION_2_0 = "3.0-2025-06-10"
+    VERSION_3_0 = "3.0-2025-06-10"
 
 
 class RecommenderInfo(BaseModel):
