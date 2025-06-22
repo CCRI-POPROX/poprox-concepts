@@ -28,8 +28,8 @@ repos:
       - id: ruff
         args: [--fix]
         name: auto-fix Python lint errors
-      # Run the formatter.
       - id: ruff-format
+        # Run the formatter.
         name: format Python source
   - repo: local
     hooks:
@@ -41,8 +41,8 @@ repos:
         language: node
         additional_dependencies:
           - "@taplo/cli"
-      # shfmt support, adapted from https://github.com/mvdan/sh/issues/818
       - id: format-shell-scripts
+        # shfmt support, adapted from https://github.com/mvdan/sh/issues/818
         name: format shell scripts
         language: golang
         require_serial: true
