@@ -18,6 +18,8 @@ class Impression(BaseModel):
     headline: str | None = None
     subhead: str | None = None
     feedback: bool | None = None
+    section_name: str | None = None
+    position_in_section: int | None = None
 
 
 class Newsletter(BaseModel):
