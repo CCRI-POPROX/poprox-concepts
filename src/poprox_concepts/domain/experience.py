@@ -10,5 +10,5 @@ class Experience(BaseModel):
     team_id: UUID
     name: str
     start_date: date
-    end_date: date
+    end_date: date | None = None
     created_at: datetime | None = None
