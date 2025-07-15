@@ -15,6 +15,14 @@ class Account(BaseModel):
     placebo_id: str | None = None
     created_at: datetime | None = None
 
+    @property
+    def internal(self) -> bool:
+        return is_internal_account(self)
+
+    @property
+    def external(self) -> bool:
+        return is_external_account(self)
+
 
 class AccountInterest(BaseModel):
     account_id: UUID | None = None
