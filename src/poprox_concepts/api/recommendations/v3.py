@@ -22,7 +22,7 @@ class RecommendationRequestV3(ProtocolModelV3_0):
     interacted: CandidateSet
     interest_profile: InterestProfile
     num_recs: PositiveInt
-    embeddings: dict[UUID, list[float]]
+    embeddings: dict[UUID, dict[str, list[float]]]
 
 
 class RecommendationResponseV3(ProtocolModelV3_0):
