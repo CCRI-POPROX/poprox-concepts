@@ -57,6 +57,11 @@ EXTERNAL_ACCOUNT_SOURCES = [
     "website",
     "ff",
     "ml-volunteers",
+    "umn_sf_25",
+    "web-sub",
+    "google",
+    "reddit",
+    "invite",
 ]
 
 
