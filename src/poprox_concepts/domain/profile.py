@@ -15,3 +15,4 @@ class InterestProfile(BaseModel):
     click_locality_counts: dict[str, int] | None = None
     article_feedbacks: dict[UUID, bool] | None = None
     onboarding_topics: list[AccountInterest]
+    onboarding_entities: list[AccountInterest] = []  # Entity preferences (person, organisation, place)

@@ -43,6 +43,7 @@ class AccountInterest(BaseModel):
     account_id: UUID | None = None
     entity_id: UUID
     entity_name: str
+    entity_type: str | None = None  # "subject", "person", "organisation", "place"
     preference: int
     frequency: int | None = None
 
