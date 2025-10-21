@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from pydantic import BaseModel, Field, PositiveInt
 
-from poprox_concepts.api.recommendations.versions import ProtocolVersions, RecommenderInfo
+from poprox_concepts.api.recommendations.versions import ProtocolVersions
+from poprox_concepts.domain.newsletter import RecommenderInfo
 from poprox_concepts.domain.profile import InterestProfile
 from poprox_concepts.domain.recommendation import CandidateSet, RecommendationList
 

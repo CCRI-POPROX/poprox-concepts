@@ -1,9 +1,5 @@
 from enum import Enum
 
-from pydantic import BaseModel
-
-from poprox_concepts.domain.newsletter import RecommenderInfo
-
 
 class ProtocolVersions(Enum):
     VERSION_1_1 = "1.1-2024-08-08"
