@@ -24,7 +24,7 @@ class RecommendationRequestV4(ProtocolModelV4_0):
     interacted: CandidateSet
     interest_profile: InterestProfile
     num_recs: PositiveInt
-    embeddings: dict[UUID, dict[str, list[float]]]
+    embeddings: dict[UUID, dict[str, list[float]]] | None = Field(default=None)
 
 
 class RecommendationResponseV4(ProtocolModelV4_0):
