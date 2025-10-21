@@ -17,6 +17,7 @@ class RecommenderInfo(BaseModel):
     version: str | None = None
     hash: str | None = None
 
+
 class Impression(BaseModel):
     impression_id: UUID = Field(default_factory=uuid4)
     newsletter_id: UUID | None
