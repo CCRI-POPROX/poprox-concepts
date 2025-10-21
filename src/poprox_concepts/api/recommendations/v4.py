@@ -6,7 +6,7 @@ from uuid import UUID
 from pydantic import BaseModel, Field, JsonValue, PositiveInt
 
 from poprox_concepts.api.recommendations.versions import ProtocolVersions, RecommenderInfo
-from poprox_concepts.domain import CandidateSet, Impression, InterestProfile
+from poprox_concepts.domain import CandidateSet, ImpressedRecommendations, InterestProfile
 
 Extra: TypeAlias = dict[str, JsonValue]
 
@@ -28,5 +28,5 @@ class RecommendationRequestV4(ProtocolModelV4_0):
 
 
 class RecommendationResponseV4(ProtocolModelV4_0):
-    recommendations: list[Impression] = Field(default_factory=list)
+    recommendations: ImpressedRecommendations
     recommender: RecommenderInfo | None = Field(default=None)
