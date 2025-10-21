@@ -4,13 +4,23 @@ from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
 
-from poprox_concepts.api.recommendations import RecommenderInfo
 from poprox_concepts.domain.article import Article
 
 
+class RecommenderInfo(BaseModel):
+    """
+    Identity and versioning metadata for the system that generated the provided
+    recommendations.
+    """
+
+    name: str | None = None
+    version: str | None = None
+    hash: str | None = None
+
+
 class Impression(BaseModel):
-    impression_id: UUID = Field(default_factory=uuid4)
-    newsletter_id: UUID | None
+    impression_id: UUID | None = Field(default_factory=uuid4)
+    newsletter_id: UUID | None = None
     position: int
     article: Article
     created_at: datetime | None = None
