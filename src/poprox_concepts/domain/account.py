@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -28,6 +29,7 @@ class AccountInterest(BaseModel):
     account_id: UUID | None = None
     entity_id: UUID
     entity_name: str
+    entity_type: Literal["subject", "person", "organisation", "place"] | None = None
     preference: int
     frequency: int | None = None
 
