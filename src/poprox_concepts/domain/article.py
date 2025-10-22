@@ -32,6 +32,7 @@ class Article(BaseModel):
     url: str | None = None
     preview_image_id: UUID | None = None
     mentions: list[Mention] = []
+    linked_articles: dict[UUID, str] = {}
     source: str | None = None
     external_id: str | None = None
     raw_data: dict[str, Any] | None = None
