@@ -32,7 +32,7 @@ class Impression(BaseModel):
     position_in_section: int | None = None
 
     def model_post_init(self, __context):
-        """ This function is automatically called by the pydantic framework after the model object is initialized."""
+        """This function is automatically called by the pydantic framework after the model object is initialized."""
         self.headline = self.headline or self.article.headline
         self.subhead = self.subhead or self.article.subhead
 
