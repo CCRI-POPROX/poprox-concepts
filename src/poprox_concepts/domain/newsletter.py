@@ -31,6 +31,10 @@ class Impression(BaseModel):
     section_name: str | None = None
     position_in_section: int | None = None
 
+    def model_post_init(self, __context):
+        self.headline = self.headline or self.article.headline
+        self.subhead = self.subhead or self.article.subhead
+
 
 class Newsletter(BaseModel):
     newsletter_id: UUID = Field(default_factory=uuid4)
