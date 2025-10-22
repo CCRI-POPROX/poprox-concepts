@@ -27,6 +27,7 @@ class Impression(BaseModel):
     extra: dict[str, Any] | None = None
     headline: str | None = None
     subhead: str | None = None
+    preview_image_id: UUID | None = None
     feedback: bool | None = None
     section_name: str | None = None
     position_in_section: int | None = None
@@ -35,6 +36,7 @@ class Impression(BaseModel):
         """This function is automatically called by the pydantic framework after the model object is initialized."""
         self.headline = self.headline or self.article.headline
         self.subhead = self.subhead or self.article.subhead
+        self.preview_image_id = self.preview_image_id or self.article.preview_image_id
 
 
 class Newsletter(BaseModel):
