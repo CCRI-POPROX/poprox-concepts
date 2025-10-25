@@ -24,6 +24,13 @@ class Account(BaseModel):
         return is_external_account(self)
 
 
+class Subscription(BaseModel):
+    subscription_id: UUID | None = None
+    account_id: UUID
+    started: datetime
+    ended: datetime | None = None
+
+
 class AccountInterest(BaseModel):
     account_id: UUID | None = None
     entity_id: UUID
