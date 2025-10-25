@@ -31,6 +31,14 @@ class Subscription(BaseModel):
     ended: datetime | None = None
 
 
+class ConsentLog(BaseModel):
+    consent_log_id: UUID | None = None
+    account_id: UUID
+    document_name: str
+    created_at: datetime
+    ended_at: datetime | None = None
+
+
 class AccountInterest(BaseModel):
     account_id: UUID | None = None
     entity_id: UUID
