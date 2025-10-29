@@ -44,7 +44,7 @@ class AccountInterest(BaseModel):
     account_id: UUID | None = None
     entity_id: UUID
     entity_name: str
-    entity_type: Literal["subject", "person", "organisation", "place"] | None = None
+    entity_type: Literal["topic", "person", "organisation", "place"] | None = None
     preference: int
     frequency: int | None = None
 
