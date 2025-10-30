@@ -41,6 +41,23 @@ class Article(BaseModel):
     created_at: datetime | None = None
 
 
+# What we get from AP and use at ingestion time
+class TopStoryPackage(BaseModel):
+    package_id: UUID | None = None
+    entity: Entity
+    articles: list[UUID]
+    as_of: datetime
+    created_at: datetime = datetime.now(timezone.utc)
+
+
+# What we send to the recommender
+# We want this to be able to account for "most clicked yesterday"
+class TopStories(BaseModel):
+    source: str
+    entity: Entity | None = None
+    article_ids: list[UUID]
+
+
 class ArticlePlacement(BaseModel):
     placement_id: UUID = Field(default_factory=uuid4)
     article_id: UUID
@@ -49,12 +66,3 @@ class ArticlePlacement(BaseModel):
     level: str | None = None
     image_url: str | None = None
     created_at: datetime = datetime.now(timezone.utc)
-
-
-class TopNewsHeadline(BaseModel):
-    article_id: UUID | None = None
-    entity_id: UUID | None = None
-    topic: str
-    headline: str
-    position: int
-    as_of: datetime
