@@ -1,10 +1,9 @@
-from collections.abc import Iterable, Sequence
-from typing import Literal
+from collections.abc import Iterable
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict
 
-from poprox_concepts.domain.account import AccountInterest
+from poprox_concepts.domain.account import AccountInterest, EntityType
 from poprox_concepts.domain.click import Click
 
 
@@ -19,10 +18,14 @@ class InterestProfile(BaseModel):
     entity_interests: list[AccountInterest] = []
 
     def interests_by_type(
-        self, entity_type: Literal["topic", "person", "organisation", "place"]
+        self, entity_type: EntityType
     ) -> Iterable[AccountInterest]:
         return (ai for ai in self.entity_interests if ai.entity_type == entity_type)
 
     @property
-    def onboarding_topics(self) -> Sequence[AccountInterest]:
-        return list(self.interests_by_type("topic"))
+    def onboarding_topics(self) -> Iterable[AccountInterest]:
+        """
+        .. deprecated:: 1.0
+            Use :meth:`interests_by_type` with "topic" instead.
+        """
+        return self.interests_by_type("topic")

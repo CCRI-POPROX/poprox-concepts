@@ -1,8 +1,12 @@
 from datetime import datetime
-from typing import Literal
+from typing import Literal, TypeAlias
 from uuid import UUID
 
 from pydantic import BaseModel
+
+
+# Add type alias for reusability
+EntityType: TypeAlias = Literal["topic", "person", "organization", "place"]
 
 
 class Account(BaseModel):
@@ -44,7 +48,7 @@ class AccountInterest(BaseModel):
     account_id: UUID | None = None
     entity_id: UUID
     entity_name: str
-    entity_type: Literal["topic", "person", "organisation", "place"] | None = None
+    entity_type: EntityType | None = None
     preference: int
     frequency: int | None = None
 

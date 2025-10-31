@@ -1,4 +1,4 @@
-from poprox_concepts.domain.account import Account, AccountInterest, ConsentLog, Subscription
+from poprox_concepts.domain.account import Account, AccountInterest, ConsentLog, EntityType, Subscription
 from poprox_concepts.domain.article import Article, ArticlePlacement, Entity, Mention, TopNewsHeadline
 from poprox_concepts.domain.click import Click
 from poprox_concepts.domain.demographics import Demographics
@@ -12,6 +12,7 @@ from poprox_concepts.domain.recommendation import CandidateSet, ImpressedRecomme
 __all__ = [
     "Account",
     "AccountInterest",
+    "EntityType",
     "Article",
     "ArticlePlacement",
     "CandidateSet",
