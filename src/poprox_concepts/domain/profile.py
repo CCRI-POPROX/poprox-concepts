@@ -17,9 +17,7 @@ class InterestProfile(BaseModel):
     article_feedbacks: dict[UUID, bool] | None = None
     entity_interests: list[AccountInterest] = []
 
-    def interests_by_type(
-        self, entity_type: EntityType
-    ) -> Iterable[AccountInterest]:
+    def interests_by_type(self, entity_type: EntityType) -> Iterable[AccountInterest]:
         return (ai for ai in self.entity_interests if ai.entity_type == entity_type)
 
     @property
