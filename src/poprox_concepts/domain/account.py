@@ -4,7 +4,6 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
-
 # Add type alias for reusability
 EntityType: TypeAlias = Literal["topic", "person", "organization", "place"]
 
