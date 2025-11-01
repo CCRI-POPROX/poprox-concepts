@@ -20,7 +20,7 @@ class Mention(BaseModel):
     article_id: UUID | None = None
     mention_id: UUID | None = None
     source: str
-    relevance: float
+    relevance: float | None = None
     entity: Entity
 
 
