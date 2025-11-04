@@ -41,6 +41,16 @@ class Article(BaseModel):
     created_at: datetime | None = None
 
 
+class ArticlePackage(BaseModel):
+    package_id: UUID | None = None
+    title: str
+    source: str
+    seed: Entity | None = None
+    article_ids: list[UUID]
+    current_as_of: datetime | None = None
+    created_at: datetime | None = None
+
+
 class ArticlePlacement(BaseModel):
     placement_id: UUID = Field(default_factory=uuid4)
     article_id: UUID
@@ -49,12 +59,3 @@ class ArticlePlacement(BaseModel):
     level: str | None = None
     image_url: str | None = None
     created_at: datetime = datetime.now(timezone.utc)
-
-
-class TopNewsHeadline(BaseModel):
-    article_id: UUID | None = None
-    entity_id: UUID | None = None
-    topic: str
-    headline: str
-    position: int
-    as_of: datetime
