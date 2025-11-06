@@ -1,4 +1,4 @@
-from poprox_concepts.domain.account import Account, AccountInterest, ConsentLog, EntityType,Subscription
+from poprox_concepts.domain.account import Account, AccountInterest, ConsentLog, EntityType, Subscription
 from poprox_concepts.domain.article import Article, ArticlePackage, ArticlePlacement, Entity, Mention, TopNewsHeadline
 from poprox_concepts.domain.click import Click
 from poprox_concepts.domain.demographics import Demographics
