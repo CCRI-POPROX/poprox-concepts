@@ -1,3 +1,4 @@
+from datetime import datetime
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -12,6 +13,7 @@ class Demographics(BaseModel):
     education: str
     race: str
     email_client: str | None = None
+    created_at: datetime | None = None
 
 
 GENDER_OPTIONS = ["Woman", "Man", "Non-binary", "Other", "Prefer not to say"]
