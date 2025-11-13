@@ -42,7 +42,7 @@ class Article(BaseModel):
 
 
 class ArticlePackage(BaseModel):
-    package_id: UUID | None = None
+    package_id: UUID = Field(default_factory=uuid4)
     title: str
     source: str
     seed: Entity | None = None
