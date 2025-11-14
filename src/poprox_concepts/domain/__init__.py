@@ -7,7 +7,7 @@ from poprox_concepts.domain.image import Image
 from poprox_concepts.domain.login import WebLogin
 from poprox_concepts.domain.newsletter import Impression, Newsletter, RecommenderInfo
 from poprox_concepts.domain.profile import InterestProfile
-from poprox_concepts.domain.recommendation import CandidateSet, ImpressedRecommendations, RecommendationList
+from poprox_concepts.domain.recommendation import CandidateSet, ImpressedSection, RecommendationList
 
 __all__ = [
     "Account",
@@ -24,7 +24,7 @@ __all__ = [
     "Experience",
     "Image",
     "Impression",
-    "ImpressedRecommendations",
+    "ImpressedSection",
     "InterestProfile",
     "Mention",
     "Newsletter",
