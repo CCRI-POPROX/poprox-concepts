@@ -1,0 +1,44 @@
+{
+    "protocol_version": "1.1-2024-08-08",
+    "recommendations": {
+        "25356157-038a-4558-9bda-5e45a3d56724": [
+            {
+                "article_id": "ae716779-d6a1-4a31-be42-7ef97368cd31",
+                "headline": "vZgVtFlytbxHzCurVFds",
+                "subhead": null,
+                "body": null,
+                "url": "JSqqmcwDpLpCpSODCnhb",
+                "preview_image_id": null,
+                "mentions": [
+                    {
+                        "article_id": "8477d649-ae30-44a8-b500-dbb0235223e8",
+                        "mention_id": "0f89681a-40f0-4f48-9226-1fce640a58b2",
+                        "source": "EvXcewdtitkReHslwwFy",
+                        "relevance": -66987818518.1257,
+                        "entity": {
+                            "entity_id": null,
+                            "external_id": null,
+                            "name": "RoBKAXrUEvzWkjCDAvJj",
+                            "entity_type": "itqRMsYbntXiRsqhryah",
+                            "source": "vPXINVqAcyWdrTNHtRHC",
+                            "raw_data": null
+                        }
+                    }
+                ],
+                "source": "ZuHhNdsjBLTVBfUQFUPc",
+                "external_id": null,
+                "raw_data": {
+                    "QejYjRVDDocpTHoXVSdo": "7ca65e"
+                },
+                "images": null,
+                "published_at": "2007-06-17T12:59:02.768070",
+                "created_at": null
+            }
+        ]
+    },
+    "recommender": {
+        "name": "PRVYJhZeEErUqVggHAeK",
+        "version": "aiLJcZiCTcrVBZEYrVxH",
+        "hash": null
+    }
+}
