@@ -11,6 +11,7 @@ class TrackingLinkData(BaseModel):
     account_id: UUID
     url: str
     article_id: UUID
+    impression_id: UUID | None = None
 
 
 class LoginLinkData(BaseModel):
