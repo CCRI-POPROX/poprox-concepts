@@ -21,7 +21,6 @@ class RecommenderInfo(BaseModel):
 class Impression(BaseModel):
     impression_id: UUID | None = Field(default_factory=uuid4)
     newsletter_id: UUID | None = None
-    account_id: UUID | None = None
     position: int | None = Field(default=0)
     article: Article
     created_at: datetime | None = None
