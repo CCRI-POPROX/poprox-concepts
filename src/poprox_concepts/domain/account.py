@@ -50,6 +50,7 @@ class AccountInterest(BaseModel):
     entity_type: EntityType
     preference: int
     frequency: int | None = None
+    created_at: datetime | None = None
 
 
 COMPENSATION_CHARITY_OPTIONS = [
