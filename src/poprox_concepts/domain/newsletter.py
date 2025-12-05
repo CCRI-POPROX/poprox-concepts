@@ -5,6 +5,7 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel, Field
 
 from poprox_concepts.domain.article import Article
+from poprox_concepts.domain.recommendation import ImpressedSection
 
 
 class RecommenderInfo(BaseModel):
@@ -44,12 +45,19 @@ class Newsletter(BaseModel):
     account_id: UUID
     treatment_id: UUID | None = None
     experience_id: UUID | None = None
-    impressions: list[Impression]
+    sections: list[ImpressedSection]
     subject: str
     body_html: str
     created_at: datetime | None = None
     recommender_info: RecommenderInfo | None = None
     feedback: str | None = None
+
+    @property
+    def impressions(self) -> list[Impression]:
+        imp = []
+        for section in self.sections:
+            imp.append(section.impressions)
+        return imp
 
     @property
     def articles(self) -> list[Article]:
