@@ -1,0 +1,93 @@
+{
+    "protocol_version": "1.1-2024-08-08",
+    "todays_articles": [
+        {
+            "article_id": "ed700898-de1f-4be5-ab58-fb9302372a97",
+            "headline": "SeweQVOKKmwUQuWOLqUY",
+            "subhead": null,
+            "body": "gvOOhgcWXuQgorFpakHU",
+            "url": "IYcEaUxoBfzXNPZkYlvm",
+            "preview_image_id": "1b6452ae-da65-4d34-928a-285a0eeae4b2",
+            "mentions": [
+                {
+                    "article_id": "e883eea7-89aa-4f05-a33b-3232b395f5cf",
+                    "mention_id": null,
+                    "source": "cbRxUtUuIgkCFJxPtDhH",
+                    "relevance": -23158834118.6732,
+                    "entity": {
+                        "entity_id": null,
+                        "external_id": null,
+                        "name": "xncYirwhOBPGIZQisxnk",
+                        "entity_type": "AKUvmGlIBlnmnwJeQvxD",
+                        "source": "gocBKdoGETISYvDBdNIT",
+                        "raw_data": {
+                            "SyyqXgEAmQJUmbDvyXgW": "9579476"
+                        }
+                    }
+                }
+            ],
+            "source": null,
+            "external_id": "QnXqxIDfopYCZWsgIazn",
+            "raw_data": null,
+            "images": null,
+            "published_at": "2012-09-23T06:50:43.250394",
+            "created_at": null
+        }
+    ],
+    "past_articles": [
+        {
+            "article_id": "f8b7596e-2029-4479-90bd-28f5a2eb0cc6",
+            "headline": "lKlAvqCyrGXAMtfShAAl",
+            "subhead": null,
+            "body": null,
+            "url": null,
+            "preview_image_id": "d0ad45a8-7cc0-404a-b3c7-a14cda5d8c13",
+            "mentions": [
+                {
+                    "article_id": "de7f219a-0410-41c6-850d-a54f63617338",
+                    "mention_id": null,
+                    "source": "cxGCLeXXZVwGKjZKdMiD",
+                    "relevance": 649.992866963754,
+                    "entity": {
+                        "entity_id": "a51833d4-0d6e-46ec-bd9c-237ea7424ba3",
+                        "external_id": null,
+                        "name": "PYOjrFoIeLXaZbqBAVvG",
+                        "entity_type": "vErTOmnYvNCBpHKXrLiB",
+                        "source": "KAkFqlHclaUsohcMlmyp",
+                        "raw_data": null
+                    }
+                }
+            ],
+            "source": "JUCGlUGfhGnMgSvBtYIB",
+            "external_id": null,
+            "raw_data": null,
+            "images": null,
+            "published_at": "2008-02-20T14:26:22.171113",
+            "created_at": null
+        }
+    ],
+    "interest_profile": {
+        "profile_id": null,
+        "click_history": [
+            {
+                "article_id": "ff2512b9-1c88-48a0-a0be-52ce5506445d",
+                "newsletter_id": null,
+                "timestamp": null
+            }
+        ],
+        "click_topic_counts": {
+            "aTGrCvpsmatNVqQGCZIS": 3854
+        },
+        "click_locality_counts": null,
+        "onboarding_topics": [
+            {
+                "account_id": null,
+                "entity_id": "43a1b489-f99d-4866-8d11-1a92651f3055",
+                "entity_name": "rhZqaCzflTWsRzCFFsHM",
+                "preference": 4683,
+                "frequency": 781
+            }
+        ]
+    },
+    "num_recs": 1
+}
