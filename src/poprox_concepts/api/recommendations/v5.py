@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import TypeAlias
 from uuid import UUID
+from datetime import datetime
 
 from pydantic import BaseModel, Field, JsonValue, PositiveInt
 
@@ -21,6 +22,9 @@ class ProtocolModelV5_0(BaseModel):
 
 
 class RecommendationRequestV5(ProtocolModelV5_0):
+    request_id: UUID | None = None
+    requested_at: datetime | None = None
+
     candidates: CandidateSet
     interacted: CandidateSet
     interest_profile: InterestProfile
@@ -30,5 +34,7 @@ class RecommendationRequestV5(ProtocolModelV5_0):
 
 
 class RecommendationResponseV5(ProtocolModelV5_0):
+    request_id: UUID | None = None
+
     recommendations: list[ImpressedSection]
     recommender: RecommenderInfo | None = Field(default=None)
