@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import TypeAlias
-from uuid import UUID
+from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field, JsonValue, PositiveInt
 
@@ -22,8 +22,8 @@ class ProtocolModelV5_0(BaseModel):
 
 
 class RecommendationRequestV5(ProtocolModelV5_0):
-    request_id: UUID | None = None
-    requested_at: datetime | None = None
+    request_id: UUID = Field(default_factory=uuid4)
+    requested_at: datetime = Field(default_factory=lambda: datetime.now())
 
     candidates: CandidateSet
     interacted: CandidateSet
