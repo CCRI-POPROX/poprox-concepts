@@ -1,4 +1,5 @@
 from datetime import datetime
+from itertools import zip_longest
 from typing import Any
 from uuid import UUID, uuid4
 
@@ -39,17 +40,54 @@ class Impression(BaseModel):
         self.preview_image_id = self.preview_image_id or self.article.preview_image_id
 
 
+class ImpressedSection(BaseModel):
+    title: str | None = None
+    flavor: str | None = None
+    personalized: bool = True
+    seed_entity_id: UUID | None = None
+    impressions: list[Impression] = Field(default_factory=list)
+
+    @classmethod
+    def from_articles(
+        cls,
+        articles,
+        extras=None,
+        title: str | None = None,
+        flavor: str | None = None,
+        seed_entity_id: UUID | None = None,
+        personalized: bool = True,
+    ):
+        extras = extras or []
+        return ImpressedSection(
+            impressions=[
+                Impression(position=idx + 1, article=article, extra=extra)
+                for idx, (article, extra) in enumerate(zip_longest(articles, extras))
+            ],
+            title=title,
+            flavor=flavor,
+            seed_entity_id=seed_entity_id,
+            personalized=personalized,
+        )
+
+
 class Newsletter(BaseModel):
     newsletter_id: UUID = Field(default_factory=uuid4)
     account_id: UUID
     treatment_id: UUID | None = None
     experience_id: UUID | None = None
-    impressions: list[Impression]
+    sections: list[ImpressedSection]
     subject: str
     body_html: str
     created_at: datetime | None = None
     recommender_info: RecommenderInfo | None = None
     feedback: str | None = None
+
+    @property
+    def impressions(self) -> list[Impression]:
+        imp = []
+        for section in self.sections:
+            imp.extend(section.impressions)
+        return imp
 
     @property
     def articles(self) -> list[Article]:
