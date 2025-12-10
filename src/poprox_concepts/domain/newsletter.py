@@ -56,7 +56,7 @@ class Newsletter(BaseModel):
     def impressions(self) -> list[Impression]:
         imp = []
         for section in self.sections:
-            imp.append(section.impressions)
+            imp.extend(section.impressions)
         return imp
 
     @property
