@@ -6,8 +6,8 @@ from uuid import UUID
 from pydantic import BaseModel, Field, JsonValue, PositiveInt
 
 from poprox_concepts.api.recommendations.versions import ProtocolVersions
-from poprox_concepts.domain import ArticlePackage, CandidateSet, ImpressedSection, InterestProfile
-from poprox_concepts.domain.newsletter import RecommenderInfo
+from poprox_concepts.domain import ArticlePackage, CandidateSet, InterestProfile
+from poprox_concepts.domain.newsletter import ImpressedSection, RecommenderInfo
 
 Extra: TypeAlias = dict[str, JsonValue]
 
