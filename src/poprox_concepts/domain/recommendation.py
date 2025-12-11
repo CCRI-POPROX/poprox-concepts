@@ -1,3 +1,4 @@
+from datetime import datetime
 from itertools import zip_longest
 from typing import TypeAlias
 from uuid import UUID
@@ -9,10 +10,17 @@ from poprox_concepts.domain import Article, Impression
 Extra: TypeAlias = dict[str, JsonValue]
 
 
-class CandidateSet(BaseModel):
+class CandidatePool(BaseModel):
     model_config = ConfigDict(extra="allow")
 
+    pool_id: UUID | None = None
+    pool_type: str | None = None
+    created_at: datetime | None = None
+
     articles: list[Article]
+
+
+CandidateSet: TypeAlias = CandidatePool
 
 
 class RecommendationList(BaseModel):
