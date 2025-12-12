@@ -30,7 +30,6 @@ class Impression(BaseModel):
     subhead: str | None = None
     preview_image_id: UUID | None = None
     feedback: bool | None = None
-    section_name: str | None = None
     position_in_section: int | None = None
 
     def model_post_init(self, __context):
