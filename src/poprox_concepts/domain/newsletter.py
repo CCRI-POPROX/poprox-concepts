@@ -40,11 +40,13 @@ class Impression(BaseModel):
 
 
 class ImpressedSection(BaseModel):
+    section_id: UUID | None = None
     title: str | None = None
     flavor: str | None = None
     personalized: bool = True
     seed_entity_id: UUID | None = None
     impressions: list[Impression] = Field(default_factory=list)
+    position: int | None = None
 
     @classmethod
     def from_articles(
