@@ -1,6 +1,6 @@
 from datetime import datetime
-from itertools import zip_longest
 from typing import TypeAlias
+from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, JsonValue
 
