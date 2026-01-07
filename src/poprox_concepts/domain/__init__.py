@@ -5,9 +5,9 @@ from poprox_concepts.domain.demographics import Demographics
 from poprox_concepts.domain.experience import Experience
 from poprox_concepts.domain.image import Image
 from poprox_concepts.domain.login import WebLogin
-from poprox_concepts.domain.newsletter import Impression, Newsletter, RecommenderInfo
+from poprox_concepts.domain.newsletter import ImpressedSection, Impression, Newsletter, RecommenderInfo
 from poprox_concepts.domain.profile import InterestProfile
-from poprox_concepts.domain.recommendation import CandidateSet, ImpressedSection, RecommendationList
+from poprox_concepts.domain.recommendation import CandidateSet, RecommendationList
 
 __all__ = [
     "Account",
