@@ -54,9 +54,7 @@ class AccountInterest(BaseModel):
 
 
 COMPENSATION_CHARITY_OPTIONS = [
-    "American Red Cross",
-    "American Cancer Society",
-    "Boys & Girls Club of America",
+    "Feeding Acmerica",
 ]
 
 
