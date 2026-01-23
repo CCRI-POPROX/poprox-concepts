@@ -54,7 +54,7 @@ class AccountInterest(BaseModel):
 
 
 COMPENSATION_CHARITY_OPTIONS = [
-    "Feeding Acmerica",
+    "Feeding America",
 ]
 
 
