@@ -1,4 +1,4 @@
-GENERAL_TOPICS = [
+ACTIVE_TOPICS = [
     "U.S. news",
     "World news",
     "Politics",
@@ -8,9 +8,14 @@ GENERAL_TOPICS = [
     "Health",
     "Science",
     "Technology",
+    "Oddities",
+]
+
+DEPRECATED_TOPICS = [
     "Lifestyle",
     "Religion",
     "Climate and environment",
     "Education",
-    "Oddities",
 ]
+
+GENERAL_TOPICS = ACTIVE_TOPICS + DEPRECATED_TOPICS
