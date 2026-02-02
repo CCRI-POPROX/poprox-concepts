@@ -27,6 +27,7 @@ class InterestProfile(BaseModel):
     click_topic_counts: dict[str, int] | None = None
     click_locality_counts: dict[str, int] | None = None
     article_feedbacks: dict[UUID, bool] | None = None
+    impressed_article_ids: list[UUID] = []
 
     def interests_by_type(self, entity_type: EntityType) -> Iterable[AccountInterest]:
         return (ai for ai in self.entity_interests if ai.entity_type == entity_type)
