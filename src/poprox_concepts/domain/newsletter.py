@@ -26,6 +26,7 @@ class Impression(BaseModel):
     article: Article
     created_at: datetime | None = None
     extra: dict[str, Any] | None = None
+    label: str | None = None
     headline: str | None = None
     subhead: str | None = None
     preview_image_id: UUID | None = None
