@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field, JsonValue, PositiveInt
 
 from poprox_concepts.api.recommendations.versions import ProtocolVersions
 from poprox_concepts.domain import ArticlePackage, CandidateSet, InterestProfile
-from poprox_concepts.domain.newsletter import ImpressedSection, RecommenderInfo
+from poprox_concepts.domain.newsletter import ImpressedSection, Impression, RecommenderInfo
 
 Extra: TypeAlias = dict[str, JsonValue]
 
@@ -38,3 +38,10 @@ class RecommendationResponseV5(ProtocolModelV5_0):
 
     recommendations: list[ImpressedSection]
     recommender: RecommenderInfo | None = Field(default=None)
+
+    @property
+    def impressions(self) -> list[Impression]:
+        imp = []
+        for section in self.recommendations:
+            imp.extend(section.impressions)
+        return imp
