@@ -4,11 +4,11 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel, Field
 
 
-class Compensation(BaseModel):
+class CompensationPeriod(BaseModel):
     compensation_id: UUID | None = Field(default_factory=uuid4)
     name: str | None = None
-    start_date: date | None = None
-    end_date: date | None = None
+    start_date: date
+    end_date: date
     created_at: datetime | None = None
 
     @property
