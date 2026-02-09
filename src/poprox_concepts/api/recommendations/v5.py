@@ -31,6 +31,7 @@ class RecommendationRequestV5(ProtocolModelV5_0):
     num_recs: PositiveInt
     embeddings: dict[UUID, dict[str, list[float]]] | None = Field(default=None)
     article_packages: list[ArticlePackage] = Field(default_factory=list)
+    impressed_article_ids: list[UUID] = Field(default_factory=list)
 
 
 class RecommendationResponseV5(ProtocolModelV5_0):
