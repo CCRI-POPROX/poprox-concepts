@@ -14,4 +14,4 @@ class CompensationPeriod(BaseModel):
     @property
     def active(self) -> bool:
         now = date.today()
-        return self.start_date <= now and (self.end_date is None or self.end_date >= now)
+        return self.start_date <= now and self.end_date >= now
