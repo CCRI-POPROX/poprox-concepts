@@ -16,7 +16,7 @@ class Account(BaseModel):
     status: str
     source: str | None = None
     subsource: str | None = None
-    placebo_id: str | None = None
+    placebo_id: UUID | None = None
     created_at: datetime | None = None
 
     @property
