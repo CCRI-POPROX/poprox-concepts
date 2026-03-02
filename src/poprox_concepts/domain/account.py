@@ -81,6 +81,7 @@ EXTERNAL_ACCOUNT_SOURCES = [
     "google",
     "reddit",
     "invite",
+    "cecasnews",
 ]
 
 
