@@ -82,6 +82,10 @@ EXTERNAL_ACCOUNT_SOURCES = [
     "reddit",
     "invite",
     "cecasnews",
+    "du-lis",
+    "poprox-announce-dec-2024",
+    "cu-dec-2024",
+    "jk26b",
 ]
 
 
