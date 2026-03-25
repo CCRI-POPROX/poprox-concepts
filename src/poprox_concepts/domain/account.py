@@ -89,6 +89,7 @@ EXTERNAL_ACCOUNT_SOURCES = [
     "du-cci",
     "clemson-gardens",
     "clemson-downs",
+    "movielens",
 ]
 
 
