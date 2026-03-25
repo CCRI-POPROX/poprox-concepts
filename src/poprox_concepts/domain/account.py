@@ -86,6 +86,9 @@ EXTERNAL_ACCOUNT_SOURCES = [
     "poprox-announce-dec-2024",
     "cu-dec-2024",
     "jk26b",
+    "du-cci",
+    "clemson-gardens",
+    "clemson-downs",
 ]
 
 
