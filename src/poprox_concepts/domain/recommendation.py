@@ -5,6 +5,7 @@ from uuid import UUID
 from pydantic import BaseModel, ConfigDict, Field, JsonValue
 
 from poprox_concepts.domain import Article
+from poprox_concepts.domain.account import EntityType
 
 Extra: TypeAlias = dict[str, JsonValue]
 
@@ -14,6 +15,11 @@ class CandidatePool(BaseModel):
 
     pool_id: UUID | None = None
     pool_type: str | None = None
+
+    seed_entity_id: UUID | None = None
+    seed_entity_name: str | None = None
+    seed_entity_type: EntityType | None = None
+
     created_at: datetime | None = None
 
     articles: list[Article]
