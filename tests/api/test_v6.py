@@ -81,7 +81,7 @@ def test_v6_request_round_trip_separates_catalog_from_default_package() -> None:
             [article(ARTICLE_1_ID), article(ARTICLE_1_ID)],
             [package(DEFAULT_PACKAGE_ID, [ARTICLE_1_ID])],
             DEFAULT_PACKAGE_ID,
-            f"articles contains duplicate article IDs: {ARTICLE_1_ID}",
+            "articles duplicate article ID count: 1",
         ),
         (
             [article(ARTICLE_1_ID)],
@@ -90,19 +90,19 @@ def test_v6_request_round_trip_separates_catalog_from_default_package() -> None:
                 package(DEFAULT_PACKAGE_ID, [ARTICLE_1_ID]),
             ],
             DEFAULT_PACKAGE_ID,
-            f"article_packages contains duplicate package IDs: {DEFAULT_PACKAGE_ID}",
+            "article_packages duplicate package ID count: 1",
         ),
         (
             [article(ARTICLE_1_ID)],
             [package(DEFAULT_PACKAGE_ID, [ARTICLE_1_ID, ARTICLE_1_ID])],
             DEFAULT_PACKAGE_ID,
-            f"article package {DEFAULT_PACKAGE_ID} contains duplicate article IDs: {ARTICLE_1_ID}",
+            f"article package {DEFAULT_PACKAGE_ID} duplicate article ID count: 1",
         ),
         (
             [article(ARTICLE_1_ID)],
             [package(DEFAULT_PACKAGE_ID, [UNKNOWN_ARTICLE_ID])],
             DEFAULT_PACKAGE_ID,
-            f"article package {DEFAULT_PACKAGE_ID} references unknown article IDs: {UNKNOWN_ARTICLE_ID}",
+            f"article package {DEFAULT_PACKAGE_ID} unknown article reference count: 1",
         ),
         (
             [article(ARTICLE_1_ID)],
