@@ -61,6 +61,13 @@ class ArticlePlacement(BaseModel):
     created_at: datetime = datetime.now(timezone.utc)
 
 
+class ArticleLink(BaseModel):
+    link_id: UUID = Field(default_factory=uuid4)
+    source_article_id: UUID
+    target_article_id: UUID
+    link_text: str
+
+
 # Deprecated, will be removed
 class TopNewsHeadline(BaseModel):
     article_id: UUID | None = None
