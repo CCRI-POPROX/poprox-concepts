@@ -3,6 +3,7 @@ from poprox_concepts.api.recommendations.v2 import RecommendationRequestV2, Reco
 from poprox_concepts.api.recommendations.v3 import RecommendationRequestV3, RecommendationResponseV3
 from poprox_concepts.api.recommendations.v4 import RecommendationRequestV4, RecommendationResponseV4
 from poprox_concepts.api.recommendations.v5 import RecommendationRequestV5, RecommendationResponseV5
+from poprox_concepts.api.recommendations.v6 import RecommendationRequestV6, RecommendationResponseV6
 
 RecommendationRequest = RecommendationRequestV1
 RecommendationResponse = RecommendationResponseV1
@@ -14,10 +15,12 @@ __all__ = [
     "RecommendationRequestV3",
     "RecommendationRequestV4",
     "RecommendationRequestV5",
+    "RecommendationRequestV6",
     "RecommendationResponse",
     "RecommendationResponseV1",
     "RecommendationResponseV2",
     "RecommendationResponseV3",
     "RecommendationResponseV4",
     "RecommendationResponseV5",
+    "RecommendationResponseV6",
 ]
